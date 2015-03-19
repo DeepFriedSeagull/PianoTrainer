@@ -28,7 +28,7 @@ void BasicNoteGenerator::SetRange(Note minNote, Note maxNote)
 	mMaxNote = maxNote;
 }
 
-Note BasicNoteGenerator::DrawNewtNote()
+Note BasicNoteGenerator::DrawNewNote()
 {
 	assert( mNoteHasBeenAnswered );
 	mNoteHasBeenAnswered = false;

@@ -28,9 +28,9 @@ Note::Note( int number )
 {
 }
 
-Note::Note(int octave, int getIndexInOctave)
+Note::Note(int octave, int indexInOctave)
 {
-	mNumber = (octave + 1)* mNumSemitones + getIndexInOctave;
+	mNumber = (octave + 1)* mNumSemitones + indexInOctave;
 }
 
 

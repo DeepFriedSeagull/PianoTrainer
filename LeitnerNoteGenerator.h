@@ -15,7 +15,7 @@ class LeitnerNoteGenerator : public BasicNoteGenerator
 public:
 	LeitnerNoteGenerator();
 
-	Note		DrawNewtNote();
+	Note		DrawNewNote();
 	bool		EvalAnswer(Note answer, int timeInMs, std::string& evalMessage);
 
 private:

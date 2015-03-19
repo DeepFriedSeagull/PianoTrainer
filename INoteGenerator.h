@@ -17,6 +17,6 @@ public:
 	virtual ~INoteGenerator() {}
 
 	virtual void SetRange(Note minNote, Note maxNote) = 0;
-	virtual Note DrawNewtNote() = 0;
+	virtual Note DrawNewNote() = 0;
 	virtual bool EvalAnswer(Note answer, int timeInMs, std::string& evalMessage) = 0;
 };

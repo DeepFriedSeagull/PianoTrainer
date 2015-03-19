@@ -18,7 +18,7 @@ LeitnerNoteGenerator::LeitnerNoteGenerator()
 
 void LeitnerNoteGenerator::GenerateBucket()
 {
-	if (mSessionCurrentNumber != 0 && mSessionCurrentNumber % 2 == 0)
+	if (mSessionCurrentNumber != 0 && mSessionCurrentNumber % 1 == 0)
 	{
 		mWorkingBucket.clear();
 		mSuccessBucket.clear();
@@ -32,7 +32,7 @@ void LeitnerNoteGenerator::GenerateBucket()
 		int proposedNoteNumber = -1;
 		while (proposedNoteNumber == -1)
 		{
-			proposedNoteNumber = (rand() % 12) + mMinNote.getNumber() + 12*(mSessionCurrentNumber%2);
+			proposedNoteNumber = (rand() % 12) + mMinNote.getNumber() + 12*(mSessionCurrentNumber * 0 );
 
 			if (mChooseOnlyPlainNotes)
 				if (Note::isSharpOrFlat(proposedNoteNumber))
@@ -51,7 +51,7 @@ void LeitnerNoteGenerator::GenerateBucket()
 	PrintBucketState();
 }
 
-Note LeitnerNoteGenerator::DrawNewtNote()
+Note LeitnerNoteGenerator::DrawNewNote()
 {
 	assert(mNoteHasBeenAnswered);
 	mNoteHasBeenAnswered = false;
@@ -77,7 +77,7 @@ Note LeitnerNoteGenerator::DrawNewtNote()
 	else
 	{
 		GenerateBucket();
-		return DrawNewtNote();
+		return DrawNewNote();
 	}
 }
 

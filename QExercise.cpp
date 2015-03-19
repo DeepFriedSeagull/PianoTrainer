@@ -40,7 +40,7 @@ void QExercise::start()
 	}
 	else if (mPresenter->getStaff()->getStaffClef() == StaffClef::BassClef)
 	{
-		mNoteGenerator->SetRange(41, 60);
+		mNoteGenerator->SetRange(48, 60);
 	}
 
 
@@ -113,7 +113,7 @@ void QExercise::startWaitForAnswer()
 
 	
 
-	mNoteToFind = mNoteGenerator->DrawNewtNote();
+	mNoteToFind = mNoteGenerator->DrawNewNote();
 	mPresenter->getStaff()->setNote( mNoteToFind );
 	mTime.start();
 }
